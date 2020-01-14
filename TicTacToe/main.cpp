@@ -30,6 +30,18 @@ string board[9][3] =
         {"     ", "|     |", "     "}, // 7
         {"     ", "|     |", "     "}  // 8
     };
+
+char winning_combos[8][3] = 
+{
+    {board[1][0].at(3), board[1][1].at(4), board[1][2].at(3)},
+    {board[4][0].at(3), board[4][1].at(4), board[4][2].at(3)},
+    {board[7][0].at(3), board[7][1].at(4), board[7][2].at(3)},
+    {board[1][0].at(3), board[4][0].at(3), board[7][0].at(3)},
+    {board[1][1].at(4), board[4][1].at(4), board[7][1].at(4)},
+    {board[1][2].at(3), board[4][2].at(3), board[7][2].at(3)},
+    {board[1][0].at(3), board[4][1].at(4), board[7][2].at(3)},
+    {board[7][0].at(3), board[4][1].at(4), board[1][2].at(3)}
+};
 /*
     Display main menu
     Get Player names
@@ -201,4 +213,9 @@ string PlacePiece()
     {
         return "  O  ";
     }
+}
+
+void CheckGameOver()
+{
+
 }
