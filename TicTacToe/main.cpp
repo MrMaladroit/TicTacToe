@@ -51,7 +51,7 @@ int main()
     bool should_exit = false;
     do
     {
-        system("clear");
+        system("cls");
 
         DisplayMainMenu();
         cout << "Please select an option: ";
@@ -101,14 +101,14 @@ void PlayGame()
 {
     srand(time(NULL));
 
-    system("clear");
+    system("cls");
     cout << "Please enter player one's name: ";
     getline(cin, first_player_name);
     cout << "Thank you!" << endl;
     cout << "Please enter player two's name: ";
     getline(cin, second_player_name);
 
-    system("clear");
+    system("cls");
 
     int random_starting_player { rand() % 30};
 
@@ -116,7 +116,7 @@ void PlayGame()
 
     do
     {
-        system("clear");
+        system("cls");
         DrawBoard();
         int input {};
         if(is_player_one_turn)
